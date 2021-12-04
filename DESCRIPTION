@@ -1,0 +1,24 @@
+Package: Bayesprofiling
+Type: Package
+Title: Bayesian Consumer Profiling: Estimate Consumer Characteristics from Aggregate Data
+Version: 0.1.0
+Author: c(person(given = "Haihao", family="Guo", email = "g.haihao@wustl.edu",
+                  role = c("aut", "cre")),
+          person(given = "Thomas", family="Otter", email = "Otter@marketing.uni-frankfurt.de",
+                  role = c("aut")),
+          person(given = "Arnaud", family="De Bruyn", email = "debruyn@essec.edu",
+                  role = c("aut")))
+Maintainer: Haihao Guo <g.haihao@wustl.edu>
+Description: This package is a realization of De Bruyn, A., & Otter, T. (2019). Bayesian Consumer Profiling. Available at SSRN 2740293.
+Encoding: UTF-8
+LazyData: true
+Depends: 
+    R (>= 3.1)
+Imports:
+    Rcpp,
+    RcppEigen,
+    RcppArmadillo,
+    rstan,
+    ggplot2
+LinkingTo: Rcpp,RcppArmadillo
+RoxygenNote: 7.1.1
