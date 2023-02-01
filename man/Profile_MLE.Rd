@@ -4,23 +4,30 @@
 \alias{Profile_MLE}
 \title{Consumer Profiling using the Maximum Likelihood Method}
 \usage{
-Profile_MLE(data)
+Profile_MLE(dist)
 }
 \arguments{
-\item{data}{data of both aggregate data and target list (dataframe/matrix)}
+\item{dist}{a list containing the distribution information of both the aggregate data and target list (list)}
 }
 \value{
-the list of probability of being included in the target list and the optimization result given by nlm.
+\code{Profile_MLE} returns a list containing the following fields:
+\item{w}{the posterior markov chain}
+\item{nw}{normalized markov chain}
+\item{S}{probabilities of being included in the list in markov chain}
+\item{result_MLE}{log-likelihood of markov chain}
+\item{dist_plot}{The plot of posterior distribution}
 }
 \description{
-This function estimates the probabilities of being included in the target list
+\code{Profile_MLE} estimates the probabilities of being included in the target list
 using the Maximum Likelihood Method.
 }
 \examples{
 
-
-
-
-
+# data preparation
+data(VillagesSample)
+data(XS_pop)
+Election = data_pre(VillagesSample,XS_pop,category = "zipcode_group",base= 'target')
+Result_MLE = Profile_MLE(Election)
+Result_MLE$dist_plot
 
 }

@@ -2,22 +2,53 @@
 % Please edit documentation in R/data_dist.R
 \name{data_dist}
 \alias{data_dist}
-\title{Distribution information of panel data}
+\title{Distribution information of target list and population data}
 \usage{
-data_dist(data)
+data_dist(target, population, category, base = "target")
 }
 \arguments{
-\item{data}{data of both aggregate data and target list (dataframe/matrix)}
+\item{target}{a dataframe specifying the distribution of observed categories of target list. (dataframe/matrix/vector)}
+
+\item{population}{a dataframe specifying the joint distribution of observed categories and unobserved categories of population. (dataframe/matrix)}
+
+\item{category}{a string specifying the name of the observed categories。}
+
+\item{base}{an optional logical variable specifying the base of the merge. if base = "population"
+then the intended list is the whole population and probability 0 would be assigned to those category that is
+not in the list while in the population, if base = "target" then the target list is the range of consumer of
+interest, and the observed categories not shown in the target list will be not considered when doing inferences.}
 }
 \value{
-a list of data distribution informations
+\code{data_dist} returns a list containing the following fields:
+
+\item{category}{a vector specifying the the name of the observed categories}
+\item{target}{a vector specifying the distribution of observed categories in the target list}
+\item{population}{a data frame specifying the joint distribution of the observed categories and
+unobserved categories in the population data}
+\item{n_X}{an interger specifying the number of observed categories}
+\item{n_S}{an interger specifying the number of un observed categories}
+\item{margin_on_X}{a vector specifying the marginal distribution on observed categories in the population data}
+\item{margin_on_S}{a vector specifying the marginal distribution on unobserved categories in the population data}
+\item{log_px}{a vector specifying the logaithm marginal distribution on observed categories in the population data}
+\item{log_ps}{a vector specifying the logaithm marginal distribution on unobserved categories in the population data}
+\item{pXcondS}{a dara frame specifying the conditional distribution of observed categories on unobserved categories in the population data}
+\item{log_pXcondS}{a dara frame specifying the logaithm conditional distribution of observed categories on unobserved categories in the population data}
+\item{pScondX}{a dara frame specifying the conditional distribution of unobserved categories on observed categories in the population data}
+\item{log_pScondX}{a dara frame specifying the logaithm conditional distribution of unobserved categories on observed categories in the population data}
+\item{loglik_base}{a float specifying the baseline likelihood of tartget list in population data}
 }
 \description{
-Get the distribution information of data for further analysis
+\code{data_dist} gets the distribution moment information of the observed categories and unobserved categories on both the target list
+and population distribution from the separate data of distribution of target list and population data
 }
 \examples{
 
-
-
+# data preparation
+# The distribution of observaed categories in target list
+data(VillagesSample)
+# The joint distribution of both observaed and unobserved categories in the population
+data(XS_pop)
+# Get the Dataframe
+dists_Election <- data_dist(VillagesSample,XS_pop,category = "zipcode_group")
 
 }

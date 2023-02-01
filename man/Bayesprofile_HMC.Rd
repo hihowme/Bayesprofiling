@@ -4,11 +4,9 @@
 \alias{Bayesprofile_HMC}
 \title{Bayesian Profiling using the Hamiltonian Monte Carlo Algorithm}
 \usage{
-Bayesprofile_HMC(data, prmu0, prinf0, M, chains)
+Bayesprofile_HMC(dist, prmu0, prinf0, M, chains)
 }
 \arguments{
-\item{data}{data of both aggregate data and target list (dataframe/matrix)}
-
 \item{prmu0}{mean of the prior distribution (vector)}
 
 \item{prinf0}{the information matrix of prior distribution (matrix)}
@@ -16,6 +14,8 @@ Bayesprofile_HMC(data, prmu0, prinf0, M, chains)
 \item{M}{MCMC iteration numbers (int)}
 
 \item{chains}{burn-in iterations (int)}
+
+\item{data}{data of both aggregate data and target list (dataframe/matrix)}
 }
 \value{
 the fitted result as an instance of stanfit

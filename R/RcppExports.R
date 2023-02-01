@@ -2,30 +2,30 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 Arma_colSums <- function(x) {
-    .Call('_Bayesprofiling_Arma_colSums', PACKAGE = 'Bayesprofiling', x)
+    .Call(`_Bayesprofiling_Arma_colSums`, x)
 }
 
 Arma_colmax <- function(x) {
-    .Call('_Bayesprofiling_Arma_colmax', PACKAGE = 'Bayesprofiling', x)
+    .Call(`_Bayesprofiling_Arma_colmax`, x)
 }
 
 Arma_colmean <- function(x) {
-    .Call('_Bayesprofiling_Arma_colmean', PACKAGE = 'Bayesprofiling', x)
+    .Call(`_Bayesprofiling_Arma_colmean`, x)
 }
 
 Arma_rowSums <- function(x) {
-    .Call('_Bayesprofiling_Arma_rowSums', PACKAGE = 'Bayesprofiling', x)
+    .Call(`_Bayesprofiling_Arma_rowSums`, x)
 }
 
 Arma_rowmax <- function(x) {
-    .Call('_Bayesprofiling_Arma_rowmax', PACKAGE = 'Bayesprofiling', x)
+    .Call(`_Bayesprofiling_Arma_rowmax`, x)
 }
 
 Arma_rowmean <- function(x) {
-    .Call('_Bayesprofiling_Arma_rowmean', PACKAGE = 'Bayesprofiling', x)
+    .Call(`_Bayesprofiling_Arma_rowmean`, x)
 }
 
 dmvn <- function(x, mu, cov, logd = FALSE) {
-    .Call('_Bayesprofiling_dmvn', PACKAGE = 'Bayesprofiling', x, mu, cov, logd)
+    .Call(`_Bayesprofiling_dmvn`, x, mu, cov, logd)
 }
 

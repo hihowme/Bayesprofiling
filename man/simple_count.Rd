@@ -2,25 +2,35 @@
 % Please edit documentation in R/simple_count.R
 \name{simple_count}
 \alias{simple_count}
-\title{Profiling using the Simple count method}
+\title{Consumer Profiling using the Simple count method}
 \usage{
 simple_count(dist)
 }
 \arguments{
-\item{data}{data of both aggregate data and target list (dataframe/matrix)}
+\item{data}{a data frame containing the distribution of both the aggregate data and target list (dataframe/matrix)}
 }
 \value{
-The probabilities of being included in the list
+\code{Bayesprofile_MH} returns a list containing the following fields:
+\item{profile}{The probabilities of each variable being included in the list.}
+\item{plot}{The plot of outcome distribution}
 }
 \description{
-This function estimates the probabilities of being included in the target list
-conditional on observed indicator X using the observed indicator X with the simple count method.
+\code{simple_count} estimates the probabilities of being included in the target list
+conditional on observed indicator X using the observed indicator X using the simple count method.
 }
 \examples{
 
-
-
-
-
-
+# data preparation
+data(VillagesSample)
+data(XS_pop)
+Election = data_pre(VillagesSample,XS_pop,category = "zipcode_group",base= 'target')
+dists_Election <- data_dist(Election)
+result_simple_count = simple_count(dists_Election)
+result_simple_count$profile
+result_simple_count$plot
+}
+\references{
+De Bruyn, Arnaud, and Thomas Otter (2022)
+\cite{Bayesian Consumer Profiling: How to Estimate Consumer Characteristics from Aggregate Data},
+Journal of Marketing Research (2022), 59(4), 755–774
 }
