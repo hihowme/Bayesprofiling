@@ -10,7 +10,7 @@ simple_count(dist)
 \item{data}{a data frame containing the distribution of both the aggregate data and target list (dataframe/matrix)}
 }
 \value{
-\code{Bayesprofile_MH} returns a list containing the following fields:
+\code{simple_count} returns a list containing the following fields:
 \item{profile}{The probabilities of each variable being included in the list.}
 \item{plot}{The plot of outcome distribution}
 }

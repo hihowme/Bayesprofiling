@@ -43,7 +43,7 @@
 # group distribution: number of members in observed list,
 # rows: numbers, columns: list
 # population distribution: joint distribution of observed categories and unobserved categories
-# rows:
+# rows
 
 
 # general case:

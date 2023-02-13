@@ -9,11 +9,9 @@
 #'
 #' @param data a data frame containing the distribution of both the aggregate data and target list (dataframe/matrix)
 #'
-#' @return \code{Bayesprofile_MH} returns a list containing the following fields:
+#' @return \code{simple_count} returns a list containing the following fields:
 #' \item{profile}{The probabilities of each variable being included in the list.}
 #' \item{plot}{The plot of outcome distribution}
-#'
-#'
 #'
 #' @references De Bruyn, Arnaud, and Thomas Otter (2022)
 #' \cite{Bayesian Consumer Profiling: How to Estimate Consumer Characteristics from Aggregate Data},
@@ -31,6 +29,7 @@
 #' result_simple_count$plot
 #' @export
 #'
+
 simple_count <- function (dist){
 
   # first calculate the observation numbers

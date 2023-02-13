@@ -9,7 +9,7 @@
 #' @param M MCMC iteration numbers (int)
 #' @param chains burn-in iterations (int)
 #'
-#' @return  the fitted result as an instance of stanfit
+#' @return the fitted result as an instance of stanfit
 #' @export
 #'
 #' @examples

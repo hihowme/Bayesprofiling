@@ -1,3 +1,6 @@
+#' @keywords internal
+"_PACKAGE"
+
 ## usethis namespace: start
 #' @useDynLib Bayesprofiling, .registration = TRUE
 ## usethis namespace: end
@@ -10,4 +13,5 @@ NULL
 #' @importFrom Rcpp sourceCpp
 ## usethis namespace: end
 NULL
+
 

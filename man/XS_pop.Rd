@@ -3,20 +3,22 @@
 \docType{data}
 \name{XS_pop}
 \alias{XS_pop}
-\title{Data}
+\title{XS_pop}
 \format{
-An object of class \code{data.frame} with 36239 rows and 15 columns.
+A data frame with 36239 rows and 15 variables
 }
 \usage{
-XS_pop
+data(XS_pop)
 }
 \description{
-Data
+A data set containing the information of the voting preferences of the population
+residents in each of the zipcode group. The 36239 zipcode groups are normalized to the
+integer of 1 to 36239. The variables are as follows:
 }
-\references{
-\url{data_blah.com}
+\details{
+\itemize{
+  \item zipcode_group. The zipcode group. (1 to 36239)
+  \item Other columns are the name of the president candidates.
 }
-\author{
-Thomas Otter \email{blahblah@roxygen.org}
 }
 \keyword{data}
