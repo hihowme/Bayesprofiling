@@ -1,6 +1,7 @@
-pandoc: 2.7.3
+pandoc: 2.17.1.1
 pkgdown: 2.0.1
 pkgdown_sha: ~
-articles: {}
-last_built: 2021-12-04T11:34Z
+articles:
+  Intro_to_Bayesprofiling: Intro_to_Bayesprofiling.html
+last_built: 2023-02-13T06:53Z
 

@@ -12,7 +12,7 @@ conditional on unobserved group S using the observed indicator X using the Hamil
     
     <a class="navbar-brand me-2" href="../index.html">Bayesprofiling</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,10 +23,22 @@ conditional on unobserved group S using the observed indicator X using the Hamil
       <ul class="navbar-nav me-auto"><li class="active nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
+<li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="../articles/Intro_to_Bayesprofiling.html">Introduction_to_Bayesprofiling</a>
+  </div>
+</li>
       </ul><form class="form-inline my-2 my-lg-0" role="search">
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off"></form>
 
-      <ul class="navbar-nav"></ul></div>
+      <ul class="navbar-nav"><li class="nav-item">
+  <a class="external-link nav-link" href="https://github.com/hihowme/Bayesprofiling/" aria-label="github">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul></div>
 
     
   </div>
@@ -34,7 +46,7 @@ conditional on unobserved group S using the observed indicator X using the Hamil
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="" class="logo" alt=""><h1>Bayesian Profiling using the Hamiltonian Monte Carlo Algorithm</h1>
-      
+      <small class="dont-index">Source: <a href="https://github.com/hihowme/Bayesprofiling/blob/HEAD/R/Bayesprofile_HMC.R" class="external-link"><code>R/Bayesprofile_HMC.R</code></a></small>
       <div class="d-none name"><code>Bayesprofile_HMC.Rd</code></div>
     </div>
 
@@ -45,14 +57,12 @@ conditional on unobserved group S using the observed indicator X using the Hamil
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">Bayesprofile_HMC</span><span class="op">(</span><span class="va">data</span>, <span class="va">prmu0</span>, <span class="va">prinf0</span>, <span class="va">M</span>, <span class="va">chains</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">Bayesprofile_HMC</span><span class="op">(</span><span class="va">dist</span>, <span class="va">prmu0</span>, <span class="va">prinf0</span>, <span class="va">M</span>, <span class="va">chains</span><span class="op">)</span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
-    <dl><dt>data</dt>
-<dd><p>data of both aggregate data and target list (dataframe/matrix)</p></dd>
-<dt>prmu0</dt>
+    <dl><dt>prmu0</dt>
 <dd><p>mean of the prior distribution (vector)</p></dd>
 <dt>prinf0</dt>
 <dd><p>the information matrix of prior distribution (matrix)</p></dd>
@@ -60,6 +70,8 @@ conditional on unobserved group S using the observed indicator X using the Hamil
 <dd><p>MCMC iteration numbers (int)</p></dd>
 <dt>chains</dt>
 <dd><p>burn-in iterations (int)</p></dd>
+<dt>data</dt>
+<dd><p>data of both aggregate data and target list (dataframe/matrix)</p></dd>
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
@@ -85,7 +97,8 @@ conditional on unobserved group S using the observed indicator X using the Hamil
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a>
+2.0.1.</p>
 </div>
 
     </footer></div>
