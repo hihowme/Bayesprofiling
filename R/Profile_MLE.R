@@ -33,7 +33,8 @@ Profile_MLE <- function(dist){
   log_pXcondS = as.matrix(dist$log_pXcondS)
   countX=dist$target
 
-  obj <- function(w){
+  obj <- function(w1){
+    w = c(1,w1)
     wstab=w-max(w)-log(sum(exp(w - max(w))))
     loglikind = outer(rep.int(1L, n_X), wstab)+log_pXcondS
     hilfmax = Arma_rowmax(loglikind)
@@ -43,8 +44,9 @@ Profile_MLE <- function(dist){
     return(-loglik_)
   }
   st = dist$margin_on_S/sum(dist$margin_on_S)
-  result_MLE = nlm(obj, st, hessian = TRUE)
-  w=result_MLE$estimate
+  result_MLE = nlm(obj, st[2:length(st)], hessian = TRUE)
+  w1=result_MLE$estimate
+  w = c(1,w1)
   nw = exp(w-max(w)-log(sum(exp(w - max(w)))))
   logprofcondX=outer(rep.int(1L, n_X), log(nw)) + log_pXcondS
   nconst=log(Arma_rowSums(as.matrix(exp(logprofcondX))))

@@ -11,7 +11,7 @@ This package is a realization of De Bruyn, Arnaud, and Thomas Otter (2022) \cite
 \seealso{
 Useful links:
 \itemize{
-  \item \url{}
+  \item \url{https://github.com/hihowme/Bayesprofiling}
 }
 
 }
